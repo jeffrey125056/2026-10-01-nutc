@@ -1,23 +1,148 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", "Microsoft JhengHei", sans-serif;
+  background: #050b12;
+  color: #eaf4ff;
+}
+
+body a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 10;
-  padding: 16px 8%;
-  text-align: center;
-  background: #17324d;
-  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 8%;
+  background: rgba(8, 15, 21, 0.9);
+  border-bottom: 1px solid rgba(155, 197, 255, 0.2);
+  color: #edf6ff;
 }
 
-.site-header h1 { margin: 0 0 8px; }
-.site-header a {
-  margin: 0 12px;
+.site-header strong {
+  font-size: 1.1rem;
+  letter-spacing: 0.06em;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 18px;
+}
+
+.page {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.hero {
+  padding: 52px 0 24px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #7bb4ff;
+  letter-spacing: 0.18em;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 1.15;
+  color: #dfeeff;
+}
+
+.hero p:last-child {
+  margin: 0;
+  color: #c5d7ee;
+  font-size: 1.06rem;
+  line-height: 1.8;
+}
+
+.event-card,
+.signup {
+  background: rgba(15, 27, 38, 0.94);
+  border: 1px solid rgba(130, 176, 255, 0.2);
+  border-radius: 18px;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+}
+
+.event-card {
+  padding: 24px 22px;
+  overflow: hidden;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 10px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: rgba(96, 161, 255, 0.18);
+  color: #9ed0ff;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.event-card h2,
+.signup h2 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #f2f8ff;
+}
+
+.event-card p {
+  margin: 0 0 10px;
+  line-height: 1.7;
+  color: #dfeaf8;
+}
+
+.description {
+  margin-top: 14px;
+  color: #bfd5f8;
+}
+
+.signup {
+  margin-top: 28px;
+  padding: 22px;
+}
+
+.signup button {
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4aa0ff, #1e6ee6);
   color: white;
-  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+
+.back-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #1d74df;
+  color: white;
+  font-size: 1.4rem;
+  box-shadow: 0 10px 24px rgba(29, 116, 223, 0.4);
 }
