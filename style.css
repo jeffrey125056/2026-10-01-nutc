@@ -3,24 +3,36 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+  background: #f4f7fb;
+  color: #16324a;
 }
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 16px 8%;
-  text-align: center;
   background: #17324d;
   color: white;
 }
 
-.site-header h1 { margin: 0 0 8px; }
+.site-header strong {
+  font-size: 1.1rem;
+}
+
+.site-header nav {
+  display: flex;
+  gap: 18px;
+}
+
 .site-header a {
-  margin: 0 12px;
   color: white;
   text-decoration: none;
 }
+
 .hero {
   min-height: 300px;
   padding: 64px 8%;
@@ -36,4 +48,31 @@ body {
 .hero p {
   max-width: 620px;
   line-height: 1.8;
+}
+
+.event-card {
+  position: relative;
+  width: 84%;
+  max-width: 760px;
+  margin: 44px auto;
+  padding: 30px;
+  border: 3px solid #1f5d78;
+  border-radius: 18px;
+  background: white;
+}
+
+.event-card h2 {
+  margin-top: 0;
+}
+
+.badge {
+  position: absolute;
+  top: -16px;
+  right: 24px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: #e76f51;
+  color: white;
+  font-weight: bold;
+  white-space: nowrap;
 }
